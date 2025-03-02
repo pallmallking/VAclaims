@@ -1,6 +1,6 @@
-
 import pandas as pd
 import pip
+
 # Check if pandasql is installed, if not, install it
 try:
     import pandasql

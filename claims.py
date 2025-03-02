@@ -1,7 +1,16 @@
-import pandas as pd
 
+import pandas as pd
+import pip
+# Check if pandasql is installed, if not, install it
+try:
+    import pandasql
+except ImportError:
+    print("pandasql is not installed. Installing it now...")
+    pip.main(['install', 'pandasql'])
+    # If pip is not available, you can use subprocess to install
+    import subprocess
+    subprocess.check_call(['pip', 'install', 'pandasql'])                   
 # If you want to run SQL queries on a DataFrame using pandasql,
-# install pandasql (pip install pandasql).
 try:
     from pandasql import sqldf
 except ImportError:
